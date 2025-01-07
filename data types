@@ -1,0 +1,63 @@
+DATA TYPES:
+Dynamic type language
+Two types:
+1)primitive data types: predefined  and it stores single values
+	NUMBERS : integers,floats
+	STRING: stream of characters enclosed in quotes(single,double,backtick quotes)
+	BOOLEAN: true or false
+	NULL: empty value or no value
+	UNDEFINED: a declared value with no value
+2)Non primitive data types: These are more complex types that refer to objects, classes, or arrays.
+Objects,Arrays
+
+1)CONDITION STATEMENTS: Condition statements are used to execute a block of code based on whether a specific condition is true or false. They are typically used for decision-making.
+Examples of Condition Statements in Java:
+•	if Statement: Executes a block if the condition is true.
+•	Else: Executes a block if the condition is false.
+•	else-if: 
+•	switch Statement: Selects one of many blocks to execute based on a variable's value.
+2) Loop Statements:
+Loop statements are used to repeat a block of code multiple times as long as a specified condition is true. They are typically used for iteration.
+Examples of Loop Statements in Java:
+•	for Loop: Repeats code a specific number of times.
+•	while Loop: Repeats code as long as the condition is true.
+•	do-while Loop: Similar to a while loop, but ensures the block is executed at least once.
+====
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //  const a = 1;
+      //  const a = 5
+        
+      //  console.log(a+a);
+      //  document.write(a+a);
+     // const a = "sai";
+      //{
+       // const a = "kumar";
+        //console.log(a);
+      //}
+      //console.log(a);
+     // a=1;
+      //console.log("hi +a");
+      //console.log("hi + a+a");
+      //document.write("hi+a");
+      //console.log(`Hi + ${a+a}`)
+      //document.write(`Hi + ${a+a}`);
+
+      //let a="thirmal"
+      //let b="raj"
+      //let age=20
+      //console.log(`i am ${a+" " +b} , my age is ${age} years old`)
+      //document.write(`i am ${a+" " +b} , my age is ${age} years old`)
+      
+
+
+    </script>
+</body>
+</html>
