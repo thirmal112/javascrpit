@@ -1,0 +1,46 @@
+//let number = parseInt(prompt("Enter a number to check divisibility by both 2 and 3:"));
+//if (number % 2 == 0 && number % 3 ==0) {
+ // console.log(`${number} is divisible by both 2 and 3.`);
+  //document.write(`${number} is divisible by both 2 and 3.`);
+//} else if (number % 2 ==0) {
+ // console.log(`${number} is divisible by 2.`);
+  //document.write(`${number} is divisible by 2.`);
+//} else if (number % 3 ==0) {
+ // console.log(`${number} is divisible by 3.`);
+ // document.write(`${number} is divisible by 3.`);
+//} else {
+ // console.log(`${number} is not divisible by 2 or 3.`);
+ // document.write(`${number} is not divisible by 2 or 3.`);
+//}
+
+//let num1 = parseInt(prompt("Enter first number"));
+//let num2 = parseInt(prompt("Enter second number"));
+//let num3 = parseInt(prompt("Enter third number"));
+//if (num1 > num2 && num1 > num3) {
+  //console.log(`${num1} is the largest number.`);
+  //document.write(`${num1} is the largest number.`);
+  //} else if (num2 > num1 && num2 > num3) {
+    //console.log(`${num2} is the largest number.`);
+    //document.write(`${num2} is the largest number.`);
+    //} else {
+      //console.log(`${num3} is the largest number.`);
+    //  document.write(`${num3} is the largest number.`);
+  //    }
+
+
+
+let a=parseInt(prompt("Total number of working days: "));
+let b=parseInt(prompt("Total number of days for absent: "));
+let c=(b/a)*100;
+document.write(`percentage is : ${c}`);
+let d=100-c;
+if (d>=75) {
+  console.log(`percentage is : ${d} more than 75%  , then student will eligible to write exam.`);
+  document.write(`percentage is : ${d} more than 75%  , then student will eligible to write exam.`);
+  } else {
+    console.log(`percentage is : ${d} less than 75%  , then student will not be eligible to write exam.`);
+    document.write(`percentage is : ${d} less  than 75%  , then student will not be eligible to write exam.`);
+    }
+    
+
+
