@@ -1,0 +1,196 @@
+List
+duplicates allowed
+Preserves the
+sertion order
+, multiple null
+objects allowed
+List
+Set
+1. duplicates not allowed
+2. Does NOT Preserves
+the insertion order
+3, Single null
+object allowed
+ArrayLiSt
+LinkedList
+Vector
+Stack
+Collection Framework in Java
+Iterable
+Collection
+Set
+HashSet
+LinkedHashSet
+SortedSet
+TreeSet
+add(Object)
+remove(Object)
+Queue
+PriorityQueue
+interface
+extends
+Class
+im lements
+Map
+HashMap
+LinkedHashMap
+Sorted
+Tree Map
+
+
+
+CollectionDemo.java
+  
+package day1array;
+
+import java.util.ArrayList;
+
+public class CollectionDemo {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> numbers=new ArrayList();
+		numbers.add(99);
+		numbers.add(10);
+		numbers.add(20);
+		numbers.add(40);
+		
+		System.out.println(numbers.get(0));
+		
+		System.out.println(numbers.contains(20));  //true
+//		System.out.println(numbers.size());  //3
+//		numbers.remove(1);
+//		System.out.println(numbers.size());  //2
+//		
+//		numbers.clear();
+//		System.out.println(numbers.size());  //0
+		
+//		ArrayList<String> names=new ArrayList();
+//		names.add("Alice");
+//		names.add("Ben");
+//		names.add("Chris");
+//		
+//		System.out.println(names);
+//		names.remove(2);
+//		System.out.println(names);
+	}
+
+}
+
+===================
+CountOfDigits.java
+
+package day1array;
+
+public class CountOfDigits {
+
+	public static void main(String[] args) {
+		long arr[]= {9891123123L,9891767123L,9891128888L,9867543123L,9898769123L};
+		int oddcounter,evencounter,r;
+		for(int i=0;i<arr.length;i++) 
+		{	
+			long n=arr[i];													//oddcounter	evencounter   r
+			oddcounter=0;
+			evencounter=0;
+			while(n>0)			//n											0				0             3
+			{					//9891123123       is 9891123123>0 True		1		
+				r=(int)n%10;	//989112312		   is 989112312>0 True						1			  2
+				if(r%2==0)
+					evencounter++;
+				else
+					oddcounter++;
+				n=n/10;			//
+			}
+System.out.print(String.format("Mobile Number %d has %d odd digits and %d even digits",(i+1),oddcounter,evencounter));
+
+		if(oddcounter>evencounter)
+			System.out.println(" ODD Biased Number");
+		else if(oddcounter<evencounter)
+			System.out.println(" EVEN Biased Number");
+		else
+			System.out.println(" Neutral Number");
+		}						//0
+	}
+}
+/*Mobile Number 1 has 7 odd digits and 3 even digits
+Mobile Number 2 has 7 odd digits and 3 even digits
+Mobile Number 3 has 7 odd digits and 3 even digits
+Mobile Number 4 has 7 odd digits and 3 even digits
+Mobile Number 5 has 7 odd digits and 3 even digits*/
+
+====================
+SumOfTwoNumbers.java
+
+package day1array;
+
+public class SumOfTwoNumbers {
+
+	public static void main(String[] args) {
+		int arr[]= {10,20,40,100,150};
+		int sum=170;
+		int flag=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr.length;j++)
+			{
+				if(arr[i]+arr[j]==sum && arr[i]<arr[j])
+				{
+					System.out.println("["+arr[i]+","+arr[j]+"]");
+					flag=1;
+					break;
+				}
+			}
+		}
+		if(flag==0)
+		{
+			System.out.println("NO PAIR FOUND");
+		}
+	}
+}
+
+
+//T(n)=O(n)  -Linear Time Complexity
+
+//T(n)=O(n square)  - Quadractic Time Complexity
+
+//O(n square) > O(n)
+
+
+
+
+===================
+package day1array;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class SumOfTwoNumbers2 {
+
+	public static void main(String[] args) {
+		List<Integer> arr=new ArrayList(Arrays.asList(10,20,40,100,150));
+		int sum=270;
+		int flag=0;
+		for(int i=0;i<arr.size();i++)
+		{
+			int num1=arr.get(i);   //num1=10
+			int num2=sum-num1;     //num2=160
+					if(arr.contains(num2))
+					{
+					System.out.println("["+num1+","+num2+"]");
+					flag=1;
+					break;
+					}
+		}
+		if(flag==0)
+		{
+			System.out.println("NO PAIR FOUND");
+		}
+	}
+}
+
+
+//T(n)=O(n)  -Linear Time Complexity
+
+//T(n)=O(n square)  - Quadractic Time Complexity
+
+//O(n square) > O(n)
