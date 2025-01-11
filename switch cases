@@ -1,0 +1,113 @@
+//let a=parseInt(prompt("Total number of working days: "));
+//let b=parseInt(prompt("Total number of days for absent: "));
+//let c=(b/a)*100;
+//document.write(`percentage is : ${c}`);
+//let d=100-c;
+//if (d>=75) {
+ // console.log(`percentage is : ${d} more than 75%  , then student will eligible to write exam.`);
+ // document.write(`percentage is : ${d} more than 75%  , then student will eligible to write exam.`);
+  //} else {
+  //  console.log(`percentage is : ${d} less than 75%  , then student will not be eligible to write exam.`);
+   // document.write(`percentage is : ${d} less  than 75%  , then student will not be eligible to write exam.`);
+    //}
+    
+//let num=prompt("enter a number: ")
+//switch(true){
+//  case num>0:
+ // console.log("number is positive")
+ // document.write("number is positive")
+  //break;
+//case num==0:
+ // console.log("number is zero")
+  //document.write("number is zero")
+  //break;
+  
+  //case num<0:
+  //console.log("number is negative")
+  //document.write("number is negative")
+  //break;
+  
+//default:
+//console.log("invalid input")
+//document.write("invalid input")
+//}
+
+//let d=prompt("enter a day")
+//switch(d){
+  //case "monday":
+  //console.log("today is monday")
+  //document.write("today is monday")
+  //document.write("       , WEEK Day")
+  //break;
+  
+  //case "tuesday":
+  //console.log("today is tuesday")
+ // document.write("today is tuesday")
+ // document.write("       , WEEK Day")
+ // break;
+  
+  //case "wednesday":
+  //console.log("today is wednesday")
+  //document.write("today is wednesday")
+  //document.write("       , WEEK Day")
+  //break;
+  
+  //case "thursday":
+  //console.log("today is thursday")
+  //document.write("today is thursday")
+  //document.write("       , WEEK Day")
+  //break;
+
+  //case "friday":
+  //console.log("today is friday")
+  //document.write("today is friday")
+  //document.write("       , WEEK Day")
+  //break;
+
+
+ // case "saturday":
+  //console.log("today is saturday")
+  //document.write("today is saturday")
+  //document.write("         , WEEK End")
+  //break;
+  //case "sunday":
+  //console.log("today is sunday")
+ /// document.write("today is sunday")
+ // document.write("         , WEEK End")
+  //break;
+  //default:
+  //console.log("invalid input")
+  //document.write("invalid input")
+  //break;
+  //}
+
+  //function calculateElectricityBill(units) {
+   // let totalCharge = 0;
+  
+  //  if (units <= 50) {
+    //  totalCharge = units * 2;
+    //} else if (units <= 150) {
+    //  totalCharge = 50 * 2 + (units - 50) * 3;
+    //} else if (units <= 250) {
+    //  totalCharge = 50 * 2 + 100 * 3 + (units - 150) * 5;
+   // } else {
+   //   totalCharge = 50 * 2 + 100 * 3 + 100 * 5 + (units - 250) * 8;
+    //}
+  
+   
+   // totalCharge += totalCharge * 0.2;
+  
+   // return totalCharge;
+  //}
+  //const unitsUsed = 450; 
+  //const totalBill = calculateElectricityBill(unitsUsed);
+  //console.log(`The total electricity bill for ${unitsUsed} units is: ₹${totalBill.toFixed(2)}`);
+  //document.write(`The total electricity bill for ${unitsUsed} units is: ₹${totalBill.toFixed(2)}`);
+
+  let num=prompt("enter a number: ")
+  let a=(n*n-1)/2;
+  console.log(a);
+  document.write(a);
+    
+      
+
