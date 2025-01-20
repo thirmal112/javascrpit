@@ -1,0 +1,47 @@
+Loop Statements:
+Loop statements are used to repeat a block of code multiple times as long as a specified condition is true. They are typically used for iteration.
+Examples of Loop Statements in Javascript:
+•	for Loop: Repeats code a specific number of times.
+•	For in
+•	For of
+•	while Loop: Repeats code as long as the condition is true.
+•	do-while Loop: Similar to a while loop, but ensures the block is executed at least once.
+
+For loop:
+For(intialisation; condition,update -expression{
+--block of code
+}
+
+
+=====================
+//for(let i=1;i<=5;i++){
+  //  console.log(i);
+   // document.write(i);
+    
+  //}
+  /*for(let i=0;i<7;i=i+2){
+   console.log(i);
+   document.write(i+2);
+  }*/
+  /*for(let i=10;i<=15;i++){
+    console.log(i);
+    document.write(i);
+  }*/
+
+  /*for (let i = 0; i < 5; i++) {
+    console.log("raj");
+    document.write("raj");
+  }*/
+  /*for (let i = 1; i <= 10; i++) {
+    console.log(`9 x ${i} = ${9 * i}`);
+    document.write(`9 x ${i} = ${9 * i}<br>`);
+  }*/
+ const n=[1,2,3,4,5]
+ let s=0
+ for (let i=0;i<n.length;i++){
+  s+=n[i]
+  console.log(s);
+  document.write(s);
+  
+ }
+  
