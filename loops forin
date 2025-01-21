@@ -1,0 +1,97 @@
+For in :
+Ex:
+Const a=”ramya”
+For (let i in a){
+Console.log(a[i]);
+}
+While loop:  used when the loop range is unknown
+While 1-5
+While(i<=n){ //condition  //
+//2<=8;4<=8;6<=8;8<=8;10<=8
+Console.log(i)// 2+1=3; 4+1=5; 6+1=7; 7+2=9
+i=i+2 //updation # 2+2=4;4+2=6; 6+2=8; 8+2=10
+}
+do while:  executes 1 time  even though condition is false without checking it and executes  again after checking the condition
+Syntax:
+do{
+//block of code
+} while (constion)
+
+#false
+Ex:
+Let c=0;
+do{
+console.log(“count is:”+ c);
+c++
+}while (c<5);
+}
+// break and continue
+      for (let i = 1;i <=8; i=i+2) {
+        if (i == 4) {
+          break;
+          }
+          console.log(i);
+          document.write(i);
+          }
+
+
+ // for in :
+ /*const a = "thirmal";
+ for (let i in a) {
+   console.log(a[i]);
+   document.write(a[i]);
+ }
+
+ const c=["raj","ram","sai"]
+ for (let i in c) {
+  console.log(c[i]);
+  document.write(c[i] + "<br>");
+  }*/
+
+ 
+ // for of :
+
+ /*const b = [1, 2, 3, 4, 5];
+ for (let i of b) {
+  console.log(i);
+  document.write(i);
+  document.write("<br>");
+  }*/
+ // while loop
+ /*let i = 2, n=8;
+ while (i <= n) {
+  //console.log(i);
+  //document.write(i + "<br>");
+  console.log(i+1);
+  document.write(i+1);
+  i=i+2;
+  }*/
+
+  // while loop
+
+ /* let i = 0;
+  while (i < 5) {
+    console.log(i);
+    document.write(i);
+    i++;
+    }*/
+    // do while loop
+    /*let k = 0;
+    do {
+      console.log(k);
+      document.write(k);
+      k++;
+      }
+      while (i < 5);*/
+     
+      // break and continue
+      for (let i = 1;i <=8; i=i+2) {
+        if (i >= 4) {
+          break;
+          }
+          console.log(i);
+          document.write(i);
+          }
+
+   
+     
