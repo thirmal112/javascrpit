@@ -1,0 +1,64 @@
+Nested Loops:  a loop insdie the another loop
+Nested loops are loops placed inside other loops.
+ They are a common programming concept used to handle repetitive tasks within repetitive tasks. Each time the outer loop runs once, the inner loop runs through all of its iterations.
+An inner loop within the repetative block of outer loop
+
+for(let i=1; i<=3;i++){
+  document.write(i,"<br>");
+  for(let j=1; j<=4;j++){
+    document.write(j," ");
+  }
+  document.write("<br>");
+} 
+inner loop execute 1 time and outer loop excutes completely
+0utput:
+1
+1 2 3 4
+2
+1 2 3 4
+3
+1 2 3 4
+
+
+
+
+//outerloop       
+/*for(let i=1; i<=3;i++){
+  //console.log(i);
+  document.write(i,"<br>");
+
+ //innerrloop
+  for(let j=1; j<=4;j++){
+    //console.log(j);
+    document.write(j," ");
+  }
+  document.write("<br>");
+}*/
+
+for(let i=1;i<=5;i++){
+  for(let j=1;j<=i;j++){
+    document.write(" * ");
+    }
+    document.write("<br>");
+    }
+
+    for(let i=1;i<=6;i++){
+      for(let j=1;j<=6-i;j++){
+        document.write(" - ");
+        }
+        for(let j=1; j<=i; j++){
+          document.write(" * ");
+        }
+        document.write("<br>");
+    }
+
+    let n=6;
+        for(let i=1;i<=n;i++){
+            for(let j=1;j<=n-i;j++){
+                document.write("&nbsp;&nbsp;")
+            }
+            for(let j=1;j<=2*i-1;j++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
