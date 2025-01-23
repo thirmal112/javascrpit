@@ -1,0 +1,73 @@
+Functions
+	Functions are reusable blocks of code designed to perform a specific task. 
+	It can be called any where in the program
+--Reausable code: using an existing code with out writing it everty time we need
+They allow you to write clean, modular, and efficient code by encapsulating logic that can be invoked multiple times, avoiding repetition. Here's a detailed explanation of functions in JavaScript.
+
+JavaScript.
+Keyword =function
+( )
+Parameters =values which are declared inside the ()
+While defining a functions
+/*function greet(name){
+        console.log("Hello, "+name);
+        document.write("Hello, "+name+"<br>");
+        }
+        let name =prompt("Enter your name: ")
+        let n =alert("Enter your name: ")
+        
+        greet(name);*/
+
+Arguments: values which are passed through the parameters
+
+Parameters 
+Parameters are variables that a function takes as input when it is called. 
+They act as placeholders for the values (or arguments) that are passed to the function. Parameters allow a function to operate on different inputs, making it more dynamic and reusable.
+        function sum(){
+          let a = parseInt(prompt("Enter first number: "));
+          let b = parseInt(prompt("Enter second number: "));
+          let sum = a+b;
+          console.log("Sum of  numbers is: "+sum);
+          document.write("Sum of two numbers is: "+sum+"<br>");
+          }
+          sum();
+
+Anonomous function:
+A function with out name after we create aa function with out any name and we assign  it to a variable 
+Ex:
+Sum=function(n1,n2){
+Let r=n1+n2
+Return r
+}
+Console.log(sum(8,9))
+=====
+/*function greet(){
+          console.log("Hello, World!");
+          document.write("Hello, World!<br>");
+        }
+        greet();
+        console.log("Hello, Raj");
+        document.write("Hello, Raj<br>");
+        greet();
+        console.log("Hello, Thirmal");
+        document.write("Hello, Thirmal<br>");
+        greet();*/
+
+        /*function greet(name){
+        console.log("Hello, "+name);
+        document.write("Hello, "+name+"<br>");
+        }
+        let name =prompt("Enter your name: ")
+        let n =alert("Enter your name: ")
+        
+        greet(name);*/
+
+        /*function sum(){
+          let a = parseInt(prompt("Enter first number: "));
+          let b = parseInt(prompt("Enter second number: "));
+          let sum = a+b;
+          console.log("Sum of  numbers is: "+sum);
+          document.write("Sum of two numbers is: "+sum+"<br>");
+          }
+          sum();*/
+          
