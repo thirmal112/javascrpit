@@ -1,0 +1,144 @@
+Callback function: 
+It is function , which is used to pass the argument to another function.
+
+Execution : The fuction receiving the callback will execute the callback at some point during execution(often at the end or after an synchronous operation is done.
+Ex:
+  function mainFunction(callback) {
+        console.log("Execution main function");
+        callback(); 
+        // Here we call the callback function
+      }
+      function callbackFunction() {
+        console.log("Callback function executed");
+      }
+      mainFunction(callbackFunction);
+
+EXPLANTION:
+Mainfunction takes a parameter callback
+CallbackFunction is passed as an argument to main function
+Insdie the main function ,  the callback function 
+--output:
+Mainfunction (callbackfunction)
+It will execute the code insdie the mainfunction
+It will prtint(“excuting main function”)
+Then it reaches to callback(); where it call the function which is used to passed to mainfucntion(callback).
+
+
+Ex:3
+Using an anonomous function with callback
+function greet(name,callback){
+        console.log("hello  " +name);
+        callback();
+        //excutes the callback function after greeting
+      }
+      greet("raj",function(){
+        console.log("goodbye!");
+      })
+Ex 4:
+Asynchronous callback with setTimeout
+
+
+function fetchData(callback) {
+        console.log("Fetching data...");
+        setTimeout(function () {
+          console.log("Data fetched");
+          callback(); // Call the callback function after the data is fetched
+        }, 2000);
+      }
+      
+      function processData() {
+        console.log("Processing the fetched data...");
+      }
+      fetchData(processData);
+      
+ex:5
+using a callback with array methods(map)
+code:
+      const numbers =[1,2,3,4,5]
+      const doubleNumbers = numbers.map(function (number) {
+        return number * 2;
+        })
+        console.log(doubleNumbers);
+        document.write(doubleNumbers)
+//ouput
+[2, 4, 6, 8, 10]
+0: 2
+1: 4
+2: 6
+3: 8
+4: 10 length: 5
+Explanation: 
+map() is built in array method that callback function to process each itme in array.
+        function registeruser(username,email,callback){
+          console.log("registering user "+username);
+          setTimeout(function(){
+            console.log("user " +username+" registered successfully");
+            callback(email);
+          },3000);
+        }function sendWelcomeEmail(email){
+          console.log("Sending welcome email to "+email);
+        };
+        registeruser("thirmal","thirmal@gmail.com",sendWelcomeEmail);
+
+
+======================
+  /*function mainFunction(callback) {
+        console.log("Execution main function");
+        callback(); 
+        // Here we call the callback function
+      }
+      function callbackFunction() {
+        console.log("Callback function executed");
+      }
+      mainFunction(callbackFunction);*/
+
+
+    /* function greet(name,callback){
+        console.log("hello" +name);
+        callback();
+        //excutes the callback function after greeting
+      }
+      function goodbye(){
+        console.log("good bye!")
+      }
+      greet("thirmal" ,goodbye);*/
+
+      /*function greet(name,callback){
+        console.log("hello  " +name);
+        callback();
+        //excutes the callback function after greeting
+      }
+      greet("raj",function(){
+        console.log("goodbye!");
+      })*/
+
+     /* function fetchData(callback) {
+        console.log("Fetching data...");
+        setTimeout(function () {
+          console.log("Data fetched");
+          callback(); 
+        }, 2000);
+      }
+      
+      function processData() {
+        console.log("Processing the fetched data...");
+      }
+      fetchData(processData);*/
+
+     /* const numbers =[1,2,3,4,5]
+      const doubleNumbers = numbers.map(function (number) {
+        return number * 2;
+        })
+        console.log(doubleNumbers);
+        document.write(doubleNumbers)*/
+
+        function registeruser(username,email,callback){
+          console.log("registering user "+username);
+          setTimeout(function(){
+            console.log("user " +username+" registered successfully");
+            callback(email);
+          },3000);
+        }function sendWelcomeEmail(email){
+          console.log("Sending welcome email to "+email);
+        };
+        registeruser("thirmal","thirmal@gmail.com",sendWelcomeEmail);
