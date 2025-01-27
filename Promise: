@@ -1,0 +1,167 @@
+Promise:
+ A promise is a special  object that represents the eventual completion(or failure) of an asynchronous operation
+It allows to handle asynchronous tasks more
+Three states :
+1)pending: the intial state the promises is still waiting for the operation to finish
+2)fulfilled :the operaton completed successfully 
+3)rejected : the operation failed
+1.Pending : --still not completed –continuing
+2.Fulfilled ==task completed
+3.Rejected == the operation is failed
+1)	To crate a promise – new promise()
+Two parameters-
+Resolve – to mark the promise as successfully
+Reject -mark it as failed
+2)	Handle the result:
+Then() method is called when promise is fulfilled
+It will receives the result from resolve()
+.catch() method is called if the promise is rejected 
+It receives the error message from reject()
+ /*let myPromise = new Promise((resolve, reject) => {
+          let success = true;
+          if (success) {
+              resolve("The operation is successful");
+          } else {
+              reject("The operation is failed");
+          }
+      });
+      myPromise.then((result) => {
+          console.log(result);
+          document.write(result);
+      });
+      
+      myPromise.catch((error) => {
+          console.log(error);
+          document.write(result);
+      });*/
+
+      let promise = new Promise((resolve, reject) => {
+        resolve(5);
+    });
+    
+    promise
+        .then((result) => {
+            console.log(result); 
+            return result * 2; 
+            setTimeout(()=>{
+              console.log(result);
+            },5000);  
+        })
+        .then((result) => {
+            console.log(result); 
+            return result + 3; 
+            setTimeout(()=>{
+              console.log(result);
+            },5000);  
+            console.log(result);
+        })
+        .then((result) => {
+            console.log(result); 
+        })
+        .catch((error) => {
+            console.log("error", error);
+        });
+    
+
+Promise with setTimeout
+Asynchronous task using settimeout, and the promise will resolve after a certain amount of time
+Ex: 
+
+let promise = new Promise((resolve, reject) => {
+          resolve(5);
+      });
+      
+      promise
+          .then((result) => {
+              console.log(result); // Logs 5
+              return new Promise((resolve) => {
+                  setTimeout(() => {
+                      console.log("Delayed:", result); // Logs "Delayed: 5" after 5 seconds
+                      resolve(result * 2); // Resolves with 10
+                  }, 5000);
+              });
+          })
+          .then((result) => {
+              console.log(result); // Logs 10
+              return new Promise((resolve) => {
+                  setTimeout(() => {
+                      console.log("Delayed:", result); // Logs "Delayed: 10" after 5 seconds
+                      resolve(result + 3); // Resolves with 13
+                  }, 5000);
+              });
+          })
+          .then((result) => {
+              console.log(result); // Logs 13
+          })
+          .catch((error) => {
+              console.log("error", error);
+          });
+
+ /*let myPromise = new Promise((resolve, reject) => {
+          let success = true;
+          if (success) {
+              resolve("The operation is successful");
+          } else {
+              reject("The operation is failed");
+          }
+      });
+      myPromise.then((result) => {
+          console.log(result);
+          document.write(result);
+      });
+      
+      myPromise.catch((error) => {
+          console.log(error);
+          document.write(result);
+      });*/
+
+    /*  let promise = new Promise((resolve, reject) => {
+        resolve(5);
+    });
+    
+    promise
+        .then((result) => {
+            console.log(result); 
+            return result * 2;   
+        })
+        .then((result) => {
+            console.log(result); 
+            return result + 3;   
+        })
+        .then((result) => {
+            console.log(result); 
+        })
+        .catch((error) => {
+            console.log("error", error);
+        });*/
+
+        let promise = new Promise((resolve, reject) => {
+          resolve(5);
+      });
+      
+      promise
+          .then((result) => {
+              console.log(result); // Logs 5
+              return new Promise((resolve) => {
+                  setTimeout(() => {
+                      console.log("Delayed:", result); // Logs "Delayed: 5" after 5 seconds
+                      resolve(result * 2); // Resolves with 10
+                  }, 5000);
+              });
+          })
+          .then((result) => {
+              console.log(result); // Logs 10
+              return new Promise((resolve) => {
+                  setTimeout(() => {
+                      console.log("Delayed:", result); // Logs "Delayed: 10" after 5 seconds
+                      resolve(result + 3); // Resolves with 13
+                  }, 5000);
+              });
+          })
+          .then((result) => {
+              console.log(result); // Logs 13
+          })
+          .catch((error) => {
+              console.log("error", error);
+          });
+      
