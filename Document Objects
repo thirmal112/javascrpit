@@ -1,0 +1,131 @@
+
+Methods of Document objects:
+--used to interact with and manipulate the document getting element:
+1) getting an element by id:
+2)getting an element by class
+3)getting an element by tag:
+This method takes a tag name as string and return an HTML 
+4)getting an element by query selector:
+# id and class
+<head>
+  <style>
+    
+
+    .a{
+        color:aqua
+    }
+    .b{
+        color:brown
+    }
+  </style>
+
+</head>
+<body>
+    <h1 class="a">thirmal</h1>
+    <h1 class="b">raj</h1>
+    <h1 class="b">sai</h1>
+    <h1 class="a">pardhu</h1>
+</body>
+</html>
+</head>
+<body>
+By id
+    <h1 id="a">thirmal</h1>
+    <h1 id="b">raj</h1>
+    <h1 id="c">sai</h1>
+    <h1 id="d">pardhu</h1>
+
+    <script>
+        let x=document.getElementById(id);
+    </script>
+</body>
+</html>
+
+
+
+<body>
+    <h1 id="a" class ="a">iam thirmal</h1>
+    <h1 id="b" class ="b">iam raj</h1>
+    <h1 id="c" class ="a">iam sai</h1>
+    <h1 id="d" class ="b">iam sai</h1>
+    <script>
+       // let a=document.getElementsByClassName('a');// o/p: 
+       // let b=document.getElementsByTagName('b');
+       //let b=document.getElementsByClassName('b');
+        let b=document.querySelector('h1'); //o/p: <hl class="a">iam thirmal</hl>
+       // console.log(a)
+        console.log(b)
+    </script>
+
+Manipulating elements:
+To create HTML elements:
+createElement() -create a new element  
+--method-document .createElement ()
+textContent :==single element
+<body>
+    <script>
+        let t=document.createElement('h2')
+        t.className="tr"
+        t.textContent='Hello, World!'
+        console.log(t)
+        document.body.appendChild(t)
+    </script>
+</body>
+
+ 
+Createing multiple elements:
+ const t=['thirmal','raj','sai']
+    for(let i=0; i<t.length;i++){
+        let tt=document.createElement('h1')
+        tt.className='a'
+        tt.textContent=t[i];
+        console.log(t[i])
+        console.log(t)
+        console.log(tt)
+
+        document.body.appendChild(tt)
+    }
+    </script>
+
+ 
+
+
+
+
+</head>
+<body>
+    <h1 id="a" class ="a">iam thirmal</h1>
+    <h1 id="b" class ="b">iam raj</h1>
+    <h1 id="c" class ="a">iam sai</h1>
+    <h1 id="d" class ="b">iam sai</h1>
+    <script>
+       let a=document.getElementsByClassName('a');
+       // let b=document.getElementsByTagName('b');
+       //let b=document.getElementsByClassName('b');
+        let b=document.querySelector('h1');
+       
+
+       console.log(a)
+        console.log(b)
+    </script><script>
+        /*let t=document.createElement('h2')
+        t.className="tr"
+        t.textContent='Hello, World!'
+        console.log(t)
+        document.body.appendChild(t)*/
+
+    const t=['thirmal','raj','sai']
+    for(let i=0; i<t.length;i++){
+        let tt=document.createElement('h1')
+        tt.className='a'
+        tt.textContent=t[i];
+        console.log(t[i])
+        console.log(t)
+        console.log(tt)
+
+
+        document.body.appendChild(tt)
+    }
+    </script>
+</body>
+</html>
