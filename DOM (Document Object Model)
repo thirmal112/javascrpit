@@ -1,0 +1,67 @@
+DOM: 
+DOM (Document Object Model) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, where each object corresponds to a part of the document (such as elements, attributes, and text).
+-get the 
+1)single element
+2)multiple element
+let title
+for(let i=0; i<3;i++){
+        let tt=document.createElement('h2')
+            tt.className='tt'
+            tt.textContent=[i];
+            console.log(tt)
+}
+
+    const titles=['thirmal','raj','sai']
+    for(let i=0; i<titles.length;i++){
+        let title=document.createElement('h1')
+        title.className='a'
+        title.textContent=titles[i];
+        console.log(title)
+       // document.body.appendChild(title)
+    }
+
+ 
+
+Removing a child element from a parent node:
+ <h1>Removing a child element from a parent node</h1>
+ <h2> iam Thirmal</h2>
+
+ <ul>
+  <li>raj</li>
+  <li>sai</li>
+  <li>ram</li>
+ </ul>
+
+ <script>
+    const ul=document.querySelector('ul')
+    const lists=document.querySelectorAll('li')
+    console.log(lists)
+    for(const list of lists){
+        console.log(`Removing:${list.textContent}`)
+        ul.removeChild(list)
+        console.log(lists)
+    }
+ </script>
+ 
+
+
+To append a new element:
+Append() – adding a new elemnt at the end 
+
+<div id="a">
+<h1>thirmal</h1>
+<h1>sai</h1>
+ </div>
+ <div id="b">
+  <h1>raj</h1>
+  <h1>pardhu</h1>
+   </div>
+   <script>
+    let n=document.createElement("h2")
+    n.textContent="THIRMAL"
+    let p=document.getElementById("b")
+    console.log(p.innerText)
+    p.appendChild(n)
+    console.log(p)
+    console.log(p.innerText)
+   </script>
