@@ -1,0 +1,64 @@
+3)insertBefore(): insert a new node before  an existing node or child node
+
+This requires a refernec both the new node and the existing node for insertion
+Ex:
+
+ <!-- <div id="a">
+
+<h1>thirmal</h1>
+<h1  id="r">raj</h1>
+ </div>
+ <div id="b">
+  <h2>sai</h2>
+  <h2 id="t">pardhu</h2>
+   </div>
+   <script>
+    let n=document.createElement("h2")
+    n.textContent="tagore"
+    let p=document.getElementById("a")
+    let l=document.getElementById("r")
+    p.insertBefore(n,l);
+    console.log(p) -->
+   
+    <div id="a">
+      <h1 id="t">thirmal</h1>
+      <h1 id="r">raj</h1>
+  </div>
+  <div id="b">
+      <h2>sai</h2>
+      <h2 id="u">pardhu</h2>
+  </div>
+  <script>
+      let n = document.createElement("h4");
+      n.textContent = "tagore";
+      let p = document.getElementById("a");
+      let l = document.getElementById("r");
+      p.insertBefore(n, l);
+      console.log(p);
+  
+      let m = document.createElement("h4");
+      m.textContent = "naresh";
+      let q = document.getElementById("a");  
+      let s = document.getElementById("t");  
+      q.insertBefore(m, s);  
+      console.log(q);
+
+      let mm = document.createElement("h4");
+      mm.textContent = "anil";
+      let qq = document.getElementById("b");  
+      let ss = document.getElementById("u");  
+      qq.insertBefore(mm, ss);  
+      console.log(qq); 
+      
+      let x = document.getElementById("b"); 
+      x.remove()
+
+      let z = document.getElementById("a"); 
+    let y=document.getElementById("t"); 
+    console.log(y);
+    p.removeChild(y)
+
+
+  </script>
+  
+
