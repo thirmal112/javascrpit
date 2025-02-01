@@ -1,0 +1,31 @@
+/*let age = prompt("Enter your age: ");
+      let name = prompt("Enter your name: ");
+      let citizen = confirm("Are you an Indian? Click OK, Cancel for No."); 
+      
+      if (age < 18) {
+          alert(name + ", you are not eligible to vote.");
+      } else if (!citizen) {
+          alert(name + ", you are not a citizen and cannot vote.");
+      } else {
+          alert(name + ", you are eligible to vote!");
+      }*/
+
+let spend= parseFloat(prompt("Enter an amount:"));
+let isPremium = confirm("Are you a premium member? Click OK for Yes, Cancel for No.");
+let discount = 0;
+if (spend> 100) {
+    discount = 20;
+} else if (spend >= 50 && spend <= 100) {
+    discount = 10;
+}
+
+if (isPremium) {
+    discount += 5;
+}
+
+let discountedPrice = spend - (spend * discount / 100);
+console.log(discountedPrice);
+alert(`Total after discount: Rs ${discountedPrice.toFixed(2)} (Discount applied: ${discount}%)`);
+
+
+      
