@@ -1,0 +1,100 @@
+React js:
+--create element:
+React.CreateElement()
+Synatx:
+React.CreateElement()
+Type=tag name; h,p,div)
+Props=className,id
+---ReactDom.create Root();
+--render
+
+
+Jsx:
+Javascript xml is a syntax extension for js
+It allows us to write HTML code in react
+
+The jsx code gets compiled into js
+Babel:   A tool converts HTML code in JS
+--all the html tags must be closed
+1)create an elemt with jsx
+<title>React JSX Example</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script type="text/babel">
+        const element = <h1 className="a">HELLO, JSX</h1>;
+        
+        const e = document.getElementById('app');
+        const root = ReactDOM.createRoot(e);
+        root.render(element);
+    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React JSX Example</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    
+    
+    <script >
+        const e = React.createElement(
+        'h1',{id:'a'}, "iam raj"
+        )
+        
+        const element= document.getElementById('app');
+        const root = React.createElement(element);
+        root.render(e);
+        
+
+
+        //const element = <h1 className="a">HELLO, JSX</h1>;
+        //const e = document.getElementById('app');
+        //const root = ReactDOM.createRoot(e);
+        //root.render(element);
+
+    </script>
+</body>
+</html>
+
+ <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+    const n = 10;
+    const m = <h1>Ract  is {n*2} times better than jsx</h1>
+    const r=ReactDOM.createRoot(document.getElementById('app'))
+    r.render(m);
+    </script>
+
+
+<body>
+    <div id="app"></div>
+<script type="text/babel">
+    const App = () => {
+        const isLoggedIn = true;
+        return (
+            <div>
+                {isLoggedIn ? (<h1>Welcome back, user!</h1>) : (<h1>Please log in</h1>)}
+                {isLoggedIn && <h1>You have a new notification</h1>}
+            </div>
+        );
+    };
+    const element = document.getElementById('app');
+    const root = ReactDOM.createRoot(element);
+    root.render(<App />);
+</script>
+
