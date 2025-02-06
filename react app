@@ -1,0 +1,41 @@
+Create react app
+npx create-react-app my-app # to create project name  my-app
+cd my-app #change directory(folder)
+npm start # to start react application 
+
+public/index.html: it sereves as the enrty point for app
+scr/index.js: react app where the DOM is rendered
+scr/APP.JS: serves as root of component tree
+scr/components: a folder to store resuasble components
+1)components (core building blocks of a react appliactions)
+--they help to create reusable block of code
+--if any thing goes wrong in 
+
+
+App.js
+import React from 'react';
+import './App.css';
+import Welcome1 from './components/welcome1';
+function App() {
+  return (
+ 
+    <div>
+      <Welcome1 name ="thirmal" greeting="hello"></Welcome1>
+      <Welcome1 name ="raj" greeting="hii"></Welcome1>
+    </div>
+    
+  );
+};
+export default App;
+
+Welcome.js
+import React from 'react';
+const Welcome1=(props)=>{
+    const{name, greeting}=props;
+
+    return(
+        <h1 className="message">{greeting},{name}</h1>
+    )
+}
+export default Welcome1;
+
