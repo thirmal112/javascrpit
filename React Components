@@ -1,0 +1,54 @@
+import React from 'react';
+import './App.css';
+//import Welcome1 from './components/welcome1';
+import Greeting from './components/greet';
+function App() {
+  const isLoggedIn=true;
+  return (
+   
+    <div>
+      <Greeting isLoggedIn={isLoggedIn}/>
+    </div>
+    
+  );
+};
+export default App;
+
+import React from "react";
+
+function Greeting({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1>Welcome Back!</h1>
+   }else{
+    return <h1>please login </h1>
+   }
+}
+export default Greeting;
+
+// components/fruits.js
+import React, { useState } from 'react';
+
+const FruitsList = () => {
+  const [fruits, setFruits] = useState(['Apple', 'Banana', 'Cherry', 'Date']);
+
+  const removeFruit = (index) => {
+    const newFruits = fruits.filter((_, i) => i !== index);
+    setFruits(newFruits);
+  };
+
+  return (
+    <div>
+      <h2>Fruits List</h2>
+      <ul>
+        {fruits.map((fruit, index) => (
+            <li key={index}>
+            {fruit} 
+            <button onClick={() => removeFruit(index)}>Remove</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default FruitsList;
