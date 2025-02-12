@@ -1,0 +1,59 @@
+import React from 'react';
+import  {useState} from 'react';
+import './App.css';
+import Childa from './components/childa';
+React memo: it is( high order component) not a react hook
+--it will stop the unnecessary -rendering of functional components
+--it will improve the performance of the functional components
+#keyword
+#suggestions  #1000 prdoucts render
+Parent element 
+Child -1
+Child-2
+#counter #app
+
+import Childb from './components/childb';
+const Parent=()=>{
+  const[count, setCount] = useState(0);
+  const Increment=()=>{
+    setCount(c=>c+1);
+  };
+
+
+return (
+    <div>
+      <Childa></Childa>
+      <Childb count={count} Increment={Increment}></Childb>
+   
+    </div>
+    
+  );
+}
+export default Parent;
+
+
+
+const Childa = () => {
+    console.log("child A renedred")
+    return <h1>This is childA</h1>
+};
+export default Childa;
+
+// import { memo } from "react";
+// const Childb = ({count,Increment}) => {
+//     console.log("child B renedred")
+//     return <div>
+//         <h1>CountValue={count}</h1>
+//         <button onClick={Increment}>Increment</button>
+//         </div>
+// };
+// export default memo(Childb);
+
+const Childb = ({count,Increment}) => {
+    console.log("child B renedred")
+    return <div>
+        <h1>CountValue={count}</h1>
+        <button onClick={Increment}>Increment</button>
+        </div>
+};
+export default Childb;
