@@ -1,0 +1,73 @@
+Event Handling in React:
+---Event Handling in react is how you make your app or something when the user interacts with it.
+Like:Clicking button,Submiting form,
+1)clicking a button(onClick)
+import React from 'react';
+function App(){
+  const handleClick=()=>{
+    alert("Button click");
+  }
+  return(
+    <button onClick={handleClick}>Click me</button>
+  )
+  
+}
+export default App;
+ 
+2)pressing a key(KeyDown)
+3)moving the mouse(onMouseOver)
+import React, { useState } from 'react';
+
+function App() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <div>
+      <button
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          backgroundColor: isHovered ? 'lightgrey' : 'lightblue',
+          color: isHovered ? 'black' : 'white',
+        }}
+      >Hover me</button>
+    </div>
+  );
+}
+export default App;
+ 
+4)Typing a text Box(onChange)
+Onchange:
+This events occurs in a text box
+Event.target.value:used to acess the value of input elements: like buttons, and  form elements
+import React, { useState } from 'react';
+function App(){
+  const[text,setText]=useState("")
+
+  const handleChange=(event)=>{
+    setText(event.target.value)
+  }
+  return(
+    <div>
+      <input type="text" value={text} onChange={handleChange}></input>
+      <p>Your Text: {text}</p>
+    </div>
+  )
+
+}
+export default App;
+
+
+ 
+===Use camelCase for event names.
+Pass a function to an event, this function will run when the event happens.
+
+
