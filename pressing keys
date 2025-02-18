@@ -1,0 +1,18 @@
+2)pressing a key(KeyDown)
+import './App.css';
+import React,{useState} from 'react';
+function App() {
+  const [key,setkey] = useState("");
+
+  const handleKeyDown= (event) => {
+    setkey(event.key);
+  };
+  return (
+    <div className="app">
+      <h1>welcome to raj It solutions</h1>
+      {key && <h2>pressed key:{key}</h2>}
+      <input type="text" onKeyDown={handleKeyDown} placeholder="pressed here"></input>
+    </div>
+  );
+}
+export default App;
